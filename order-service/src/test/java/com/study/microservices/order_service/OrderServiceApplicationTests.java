@@ -35,9 +35,9 @@ class OrderServiceApplicationTests {
 	void shouldSubmitOrder() {
 		String submitOrderJson = """
 				{
-				    "skuCode": "Gaming screen 15 inch",
+				    "skuCode": "banh_mi_Viet_Nam",
 				    "price": 1000,
-				    "quantity": 2
+				    "quantity": 1
 				}
 				""";
 
