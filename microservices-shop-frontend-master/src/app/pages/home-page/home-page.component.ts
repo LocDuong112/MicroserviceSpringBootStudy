@@ -49,6 +49,8 @@ export class HomePageComponent implements OnInit {
 
   orderProduct(product: Product, quantity: string) {
 
+    console.log("product", product);
+
     this.oidcSecurityService.userData$.subscribe(result => {
       const userDetails = {
         email: result.userData.email,
