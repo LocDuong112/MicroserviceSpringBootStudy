@@ -30,6 +30,7 @@ public class ProductService {
     }
 
     public List<ProductResponse> getAllProducts() {
+        log.info("Get product created successfully!");
         return productRepository.findAll()
                 .stream()
                 .map(product -> new ProductResponse(product.getId(), product.getSkuCode(), product.getName(), product.getDescription(), product.getPrice()))
