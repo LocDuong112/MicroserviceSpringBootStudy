@@ -9,7 +9,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    private  final String[] freeResourceUrl = {"/swagger-ui.html", "/swagger-ui/**", "/swagger-resources/**", "/v3/api-doc/**", "/api-doc/**", "/aggregate/**"};
+    private  final String[] freeResourceUrl = {"/swagger-ui.html", "/swagger-ui/**", "/swagger-resources/**",
+            "/v3/api-doc/**", "/api-doc/**", "/aggregate/**", "/actuator/prometheus"};
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
