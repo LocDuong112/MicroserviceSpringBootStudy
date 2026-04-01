@@ -9,7 +9,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   mongodb:
@@ -22,13 +22,13 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
       MONGO_INITDB_DATABASE: product-service
     volumes:
-      - ./data:/data/db
+      - ./data/mongodb:/data/db
 
   keycloak-mysql:
     container_name: keycloak-mysql
     image: mysql:8
     volumes:
-      - ./volume-data/mysql_keycloak_data:/var/lib/mysql
+      - ./data/mysql_keycloak_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: keycloak
